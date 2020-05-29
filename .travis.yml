@@ -1,9 +1,12 @@
-language: node_js
-node_js:
-    - "4.0"
+language: genric
+
 script:
     - echo "Deploying!!"
-install:
+
+branches:
+    only:
+    - master
 
 after_success:
     - firebase deploy --token $FIREBASE_TOKEN
+
